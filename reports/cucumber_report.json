@@ -1,0 +1,325 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "cart-&-checkout;add-multiple-items-and-checkout",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Add multiple items and checkout",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1449939249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in as \"standard_user\" \"secret_sauce\"",
+            "match": {
+              "location": "tests/steps/sortSteps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1092361665
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I add products to cart",
+            "match": {
+              "location": "tests/steps/cartSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 756785791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should see items in cart",
+            "match": {
+              "location": "tests/steps/cartSteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173057916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I complete checkout",
+            "match": {
+              "location": "tests/steps/cartSteps.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 796893041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I should see order confirmation",
+            "match": {
+              "location": "tests/steps/cartSteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2314999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 71530415
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "cart-&-checkout",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Cart & Checkout",
+    "tags": [],
+    "uri": "tests/features/cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-tests;valid-login",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Valid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 441993291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I navigate to saucedemo",
+            "match": {
+              "location": "tests/steps/loginSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 628914458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I login with username \"standard_user\" and password \"secret_sauce\"",
+            "match": {
+              "location": "tests/steps/loginSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 424276708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be logged in successfully",
+            "match": {
+              "location": "tests/steps/loginSteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 515332
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 53691582
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-tests;invalid-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Invalid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 437586957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I navigate to saucedemo",
+            "match": {
+              "location": "tests/steps/loginSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 637656375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I login with username \"locked_out_user\" and password \"wrongpass\"",
+            "match": {
+              "location": "tests/steps/loginSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 377749832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should see an error message",
+            "match": {
+              "location": "tests/steps/loginSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13050833
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65279583
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-tests",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login tests",
+    "tags": [],
+    "uri": "tests/features/login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "sort-items;sort-products-by-price",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Sort products by price",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 396266499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am logged in as \"standard_user\" \"secret_sauce\"",
+            "match": {
+              "location": "tests/steps/sortSteps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1061223917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I sort products by \"lohi\"",
+            "match": {
+              "location": "tests/steps/sortSteps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109680166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Items should be sorted by price",
+            "match": {
+              "location": "tests/steps/sortSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11478750
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46386249
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "sort-items",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Sort items",
+    "tags": [],
+    "uri": "tests/features/sort.feature"
+  }
+]
